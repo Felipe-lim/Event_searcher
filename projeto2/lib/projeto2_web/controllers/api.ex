@@ -18,7 +18,7 @@
 
 defmodule Api_event do
   def call_api(month, day, type) do
-    escript_path = "C:/API-Elixir/api.exe "  # ajuste conforme necessário
+    escript_path = "C:/API-Elixir "  # ajuste conforme necessário
 
     {result, exit_status} = System.cmd(escript_path, ["--m", Integer.to_string(month), "--d", Integer.to_string(day), "--t", type], stderr_to_stdout: true)
 
