@@ -1,0 +1,15 @@
+Start your Phoenix app with:
+
+    $ mix phx.server
+
+You can also run your app inside IEx (Interactive Elixir) as:
+
+    $ iex -S mix phx.server
+
+
+
+
+Para achar o html - web / controllers / home.html
+
+Editar o router e o page controllers para ir para novas paginas ou fazer
+requisições

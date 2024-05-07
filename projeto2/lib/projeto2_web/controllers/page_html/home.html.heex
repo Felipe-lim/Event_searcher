@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatos históricos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: "Inknut Antiqua";
+        }
+        :root {
+            font-size: 14px;
+            --minha-cor: #3D5B7B;
+            --minha-cor-hover: #2C4259;
+            --cor-enfeite: #B36E32;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        header, footer, .more, .search {
+            background-color: var(--minha-cor);
+            color: #F8F5F0;
+            border: none;
+        }
+        header, footer {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            padding-bottom: 40px;
+        }
+        h2 {
+            text-align: center;
+        }
+        header div, footer div, main div {
+            width: 100%;
+            max-width: 940px;
+        }
+        main {
+            padding: 16px 20px;
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            background-color: #F3E4CB;
+        }
+        main div {
+            background-color: #F8F5F0;
+            border-radius: 8px;
+            padding: 8px 16px;
+        }
+        .search {
+            padding: 4px 16px;
+            color: var(--cor-enfeite);
+            background-color: #F8F5F0;
+            height: 32px;
+            width: 160px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .search:hover {
+            background-color: #E7DFD0;
+        }
+        .button-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .more {
+            padding: 2px 4px;
+            border-radius: 16px;
+            height: 32px;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .more:hover {
+            background-color: var(--minha-cor-hover);
+        }
+        .form_header {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form_header div { 
+            display: flex;
+            height: 32px;
+            width: auto;
+        }
+        .form_header input { 
+            width: 40px;
+            height: 24px;
+            border-radius: 40px;
+            border: none;
+            margin-left: 8px;
+            text-align: center;
+        }
+        .form-input {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            background-color: var(--cor-enfeite);
+            margin-right: 8px;
+            padding: 4px 8px;
+            border-radius: 16px;
+        }
+        footer div {
+            display: flex;
+            flex-direction: column;
+        }
+        footer ul { 
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            list-style: none;
+        }
+        main div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Descubra fatos históricos:</h1>
+            <div class="form_header">
+                <div>
+                    <div class="form-input">Dia: <input type="text" placeholder="0"></div>
+                    <div class="form-input">Mês: <input type="text" placeholder="0"></div>
+                    <div class="form-input">Tipo: <input type="text" placeholder="0"></div>
+                </div>
+                <button class="search">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p>
+            <h2>Desenvolvedores</h2>
+              <ul>
+                <%= for dev <- @developers do %>
+                  <li><%= dev %></li>
+                <% end %>
+              </ul>
+            </p>
+            <div class="button-holder">
+                <button class="more">Ver mais</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h2>Desenvolvedores</h2>
+            <ul>
+                <li>Bruno Rafael</li>
+                <li>Clara Santos</li>
+                <li>Daniel Moreira</li>
+                <li>Felipe Lima</li>
+                <li>João Neto</li>
+                <li>Vinicius Candeia</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
