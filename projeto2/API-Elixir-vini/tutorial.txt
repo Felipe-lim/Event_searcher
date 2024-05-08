@@ -1,0 +1,12 @@
+Se quiser compilar o executável:
+
+    mix escript.build
+    
+    Toda mudança no arquivo api.ex, necessita recompilação.
+
+Para rodar:
+
+    escript api
+
+    ex: escript api --m 5 --d 5 --t births
+
